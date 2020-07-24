@@ -1,14 +1,15 @@
-h1 {
-  color: plum;
+body {
+background-color: rgb(46, 40, 102);
+color: white;
 }
 
-ul {
-  margin: 15px;
-  list-style-type: circle;
-  list-style-position: inside;
+body > p {
+  font-size: 23px;
 }
 
-ol {
-  margin: 25px;
-  list-style-type: decimal;
+header > h1 {
+  font-size: 50px;
+  color: rgb(255, 230, 0);
+  background-color: gray;
 }
+
