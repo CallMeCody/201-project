@@ -1,106 +1,141 @@
 'use strict';
 
-var nameinput;
 
-askName();
-askQuestion1();
-askQuestion2();
-askQuestion3();
-askQuestion4();
-askQuestion5();
+var name1 = prompt('Hi! I\'m Cody. What\'s your name?');
+var score = 0;
 
-
-function askName() {
-  nameinput = prompt('What is your name?');
-  // console.log('Hello! ' + nameinput + '. My name is Cody. I\'m going to ask five questions to see what you know about me.');
-  alert('Hello! ' + nameinput + '. My name is Cody. I\'m going to ask five questions to see what you know about me.');
-}
+// console.log(`The user's name is ${name1}`);
+alert('Hello ' + name1 + ' nice to meet you!');
 
 // Question 1
 
+var answer1 = prompt('1. Am I 25 years old? Yes or no?').toLowerCase();
+var normalizedResponse1 = answer1.toLowerCase();
 
-function askQuestion1() {
-  var answer1 = prompt('Am I 25 years old?', 'Type yes or no.').toLowerCase();
-
-  while (answer1 !== 'yes' && answer1 !== 'no' && answer1 !== 'y' && answer1 !== 'n') {
-    answer1 = prompt('Please answer yes or no.');
-  }
-  if (answer1 === 'yes' || answer1 === 'y') {
-    // console.log('Correct!');
-    alert('Correct!');
-  }
-  else if (answer1 === 'no' || answer1 === 'n') {
-    // console.log('Incorrect!');
-    alert('Incorrect!');
-  }
+while (normalizedResponse1 !== 'yes' && normalizedResponse1 !== 'no' && normalizedResponse1 !== 'y' && normalizedResponse1 !== 'n') {
+  answer1 = prompt('Please answer yes or no.');
+}
+if (normalizedResponse1 === 'yes' || normalizedResponse1 === 'y') {
+  // console.log('Correct!');
+  alert('Correct!');
+  score++;
+}
+else if (normalizedResponse1 === 'no' || normalizedResponse1 === 'n') {
+  // console.log('Incorrect!');
+  alert('Incorrect!');
 }
 
 // Question 2
 
-function askQuestion2() {
-  var answer2 = prompt('Am I married?', 'Type yes or no.').toLowerCase();
-  while (answer2 !== 'yes' && answer2 !== 'no' && answer2 !== 'y' && answer2 !== 'n') {
-    answer2 = prompt('Please answer yes or no.');
-  }
-  if (answer2 === 'yes' || answer2 === 'y') {
-    // console.log('Correct!');
-    alert('Correct!');
-  }
-  else if (answer2 === 'no' || answer2 === 'n') {
-    // console.log('Incorrect!');
-    alert('Incorrect!');
-  }
+var answer2 = prompt('1. Am I married?').toLowerCase();
+var normalizedResponse2 = answer2.toLowerCase();
+
+while (normalizedResponse2 !== 'yes' && normalizedResponse2 !== 'no' && normalizedResponse2 !== 'y' && normalizedResponse2 !== 'n') {
+  answer1 = prompt('Please answer yes or no.');
+}
+if (normalizedResponse2 === 'yes' || normalizedResponse2 === 'y') {
+  // console.log('Correct!');
+  alert('Correct!');
+  score++;
+}
+else if (normalizedResponse2 === 'no' || normalizedResponse2 === 'n') {
+  // console.log('Incorrect!');
+  alert('Incorrect!');
 }
 
 // Question 3
 
+var answer3 = prompt('1. Do I have one Kid? Yes or no?').toLowerCase();
+var normalizedResponse3 = answer3.toLowerCase();
 
-function askQuestion3() {
-  var answer3 = prompt('Do I have one kid?', 'Type yes or no.');
-  while (answer3 !== 'yes' && answer3 !== 'no' && answer3 !== 'y' && answer3 !== 'n') {
-    answer3 = prompt('Please answer yes or no.');
-  }
-  if (answer3 === 'yes' || answer3 === 'y') {
-    // console.log('Incorrect!');
-    alert('Incorrect');
-  }
-  else if (answer3 === 'no' || answer3 === 'n') {
-    // console.log('Correct!');
-    alert('Correct!');
-  }
+while (normalizedResponse3 !== 'yes' && normalizedResponse3 !== 'no' && normalizedResponse3 !== 'y' && normalizedResponse3 !== 'n') {
+  answer1 = prompt('Please answer yes or no.');
+}
+if (normalizedResponse3 === 'no' || normalizedResponse3 === 'n') {
+  // console.log('Correct!');
+  alert('Correct!');
+  score++;
+}
+else if (normalizedResponse3 === 'yes' || normalizedResponse3 === 'y') {
+  // console.log('Incorrect!');
+  alert('Incorrect!');
 }
 
 // Question 4
 
+var answer4 = prompt('1. Did I grow up in Crescent City, CA?').toLowerCase();
+var normalizedResponse4 = answer4.toLowerCase();
 
-function askQuestion4() {
-  var answer4 = prompt('Did I grow up in Crescent City, CA?');
-  while (answer4 !== 'yes' && answer4 !== 'no' && answer4 !== 'y' && answer4 !== 'n') {
-    answer4 = prompt('Please answer yes or no.');
-  }
-  if (answer4 === 'yes' || answer4 === 'y') {
-    // console.log('Correct!');
-    alert('Correct!');
-  }
-  else if (answer4 === 'no' || answer4 === 'n') {
-    // console.log('Incorrect!');
-    alert('Incorrect!');
-  }
+while (normalizedResponse4 !== 'yes' && normalizedResponse4 !== 'no' && normalizedResponse4 !== 'y' && normalizedResponse4 !== 'n') {
+  answer1 = prompt('Please answer yes or no.');
+}
+if (normalizedResponse4 === 'yes' || normalizedResponse4 === 'y') {
+  // console.log('Correct!');
+  alert('Correct!');
+  score++;
+}
+else if (normalizedResponse4 === 'no' || normalizedResponse4 === 'n') {
+  // console.log('Incorrect!');
+  alert('Incorrect!');
 }
 
 // Question 5
 
-function askQuestion5() {
-  var answer5 = prompt('Was I in the army for 10 years?');
-  while (answer5 !== 'yes' && answer5 !== 'no' && answer5 !== 'y' && answer5 !== 'n') {
-    answer5 = prompt('Please answer yes or no.');
+var answer5 = prompt('1. Was I in the army for 10 years?').toLowerCase();
+var normalizedResponse5 = answer5.toLowerCase();
+
+while (normalizedResponse5 !== 'yes' && normalizedResponse5 !== 'no' && normalizedResponse5 !== 'y' && normalizedResponse5 !== 'n') {
+  answer1 = prompt('Please answer yes or no.');
+}
+if (normalizedResponse5 === 'no' || normalizedResponse5 === 'n') {
+  // console.log('Correct!');
+  alert('Correct!');
+  score++;
+}
+else if (normalizedResponse5 === 'yes' || normalizedResponse5 === 'y') {
+  // console.log('Incorrect!');
+  alert('Incorrect!');
+}
+
+// Question 6
+
+var answer6 = prompt('Guess a number between 1 and 10!');
+var number = 5;
+
+for (var i = 1; i < 4; i++) {
+  if (answer6 < number) {
+    answer6 = prompt('Too low! Try again.');
   }
-  if (answer5 === 'yes' || answer5 === 'y') {
-    // console.log('Incorrect! Thanks for playing ' + nameinput + '.');
-    alert('Incorrect! Thanks for playing ' + nameinput + '.');
+  else if (answer6 > number) {
+    answer6 = prompt('Too high! Try again.');
   }
-  else if (answer5 === 'no' || answer5 === 'n') {
-    // console.log('Correct! Thanks for playing ' + nameinput + '.');
-    alert('Correct! Thanks for playing ' + nameinput + '.');
+  else if (answer6 === number) {
+    console.log('Guessed right.');
+    alert('Good Job!');
+    score++;
   }
 }
+alert('The answer is 5!');
+
+// Question 7
+
+var answer7 = prompt('What is my favorite video game series?');
+var normalizedResponse7 = answer7.toLowerCase();
+
+var games = ['halo', 'destiny', 'elder scrolls', 'mortal kombat', 'resident evil', 'call of duty'];
+for (var j = 1; j < 6; j++)
+{
+  if (normalizedResponse7 === games[0]) {
+    // console.log('Correct!');
+    alert('Correct!');
+    score++;
+    break;
+  }
+  else if (normalizedResponse7 !== games[0]) {
+    // console.log('Incorrect!');
+    prompt('That\'s not it! Try again!');
+  }
+}
+alert('My favorite video game series is Halo!');
+
+alert(`Thanks for playing ${name1} your score is ${score}`);
