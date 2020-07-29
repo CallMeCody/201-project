@@ -119,23 +119,20 @@ alert('The answer is 5!');
 
 // Question 7
 
-var answer7 = prompt('What is my favorite video game series?');
+var answer7 = prompt('What is one of my favorite video game series?');
 var normalizedResponse7 = answer7.toLowerCase();
 
-var games = ['halo', 'destiny', 'elder scrolls', 'mortal kombat', 'resident evil', 'call of duty'];
-for (var j = 1; j < 6; j++)
-{
-  if (normalizedResponse7 === games[0]) {
+var games = ['halo', 'destiny', 'divinity', 'escape from tarkov', 'dayz', 'fallout', 'terraria', 'ark', 'elder scrolls', 'league of legends'];
+for (var j = 1; j < 6; j++) {
+  if (normalizedResponse7 === games[j]) {
     // console.log('Correct!');
     alert('Correct!');
     score++;
     break;
   }
-  else if (normalizedResponse7 !== games[0]) {
+  else if (normalizedResponse7 !== games[j]) {
     // console.log('Incorrect!');
     prompt('That\'s not it! Try again!');
   }
 }
-alert('My favorite video game series is Halo!');
-
 alert(`Thanks for playing ${name1} your score is ${score}`);
