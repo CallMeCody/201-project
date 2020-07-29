@@ -1,138 +1,211 @@
+/* eslint-disable no-trailing-spaces */
 'use strict';
 
+// ask name
+var userName = prompt('What is your name?');
+//makes sure they enter something
+while (userName === null || userName === '') 
+{
+  userName = prompt('Please enter your name');
+}
+//console.log(`the user's name is ${userName}`);
+alert('Hello ' + userName + ', I\'m going to ask you 5 questions about myself.  Please answer in the form of (yes/no) or (y/n)');
 
-var name1 = prompt('Hi! I\'m Cody. What\'s your name?');
 var score = 0;
 
-// console.log(`The user's name is ${name1}`);
-alert('Hello ' + name1 + ' nice to meet you!');
+// question 1
+var answer = prompt('Am I 25 years old?').toLowerCase();
+//console.log(`initial input is ${answer}`);
 
-// Question 1
+var checker = false;
 
-var answer1 = prompt('1. Am I 25 years old? Yes or no?').toLowerCase();
-var normalizedResponse1 = answer1.toLowerCase();
-
-while (normalizedResponse1 !== 'yes' && normalizedResponse1 !== 'no' && normalizedResponse1 !== 'y' && normalizedResponse1 !== 'n') {
-  answer1 = prompt('Please answer yes or no.');
-}
-if (normalizedResponse1 === 'yes' || normalizedResponse1 === 'y') {
-  // console.log('Correct!');
-  alert('Correct!');
-  score++;
-}
-else if (normalizedResponse1 === 'no' || normalizedResponse1 === 'n') {
-  // console.log('Incorrect!');
-  alert('Incorrect!');
-}
-
-// Question 2
-
-var answer2 = prompt('1. Am I married?').toLowerCase();
-var normalizedResponse2 = answer2.toLowerCase();
-
-while (normalizedResponse2 !== 'yes' && normalizedResponse2 !== 'no' && normalizedResponse2 !== 'y' && normalizedResponse2 !== 'n') {
-  answer1 = prompt('Please answer yes or no.');
-}
-if (normalizedResponse2 === 'yes' || normalizedResponse2 === 'y') {
-  // console.log('Correct!');
-  alert('Correct!');
-  score++;
-}
-else if (normalizedResponse2 === 'no' || normalizedResponse2 === 'n') {
-  // console.log('Incorrect!');
-  alert('Incorrect!');
-}
-
-// Question 3
-
-var answer3 = prompt('1. Do I have one Kid? Yes or no?').toLowerCase();
-var normalizedResponse3 = answer3.toLowerCase();
-
-while (normalizedResponse3 !== 'yes' && normalizedResponse3 !== 'no' && normalizedResponse3 !== 'y' && normalizedResponse3 !== 'n') {
-  answer1 = prompt('Please answer yes or no.');
-}
-if (normalizedResponse3 === 'no' || normalizedResponse3 === 'n') {
-  // console.log('Correct!');
-  alert('Correct!');
-  score++;
-}
-else if (normalizedResponse3 === 'yes' || normalizedResponse3 === 'y') {
-  // console.log('Incorrect!');
-  alert('Incorrect!');
-}
-
-// Question 4
-
-var answer4 = prompt('1. Did I grow up in Crescent City, CA?').toLowerCase();
-var normalizedResponse4 = answer4.toLowerCase();
-
-while (normalizedResponse4 !== 'yes' && normalizedResponse4 !== 'no' && normalizedResponse4 !== 'y' && normalizedResponse4 !== 'n') {
-  answer1 = prompt('Please answer yes or no.');
-}
-if (normalizedResponse4 === 'yes' || normalizedResponse4 === 'y') {
-  // console.log('Correct!');
-  alert('Correct!');
-  score++;
-}
-else if (normalizedResponse4 === 'no' || normalizedResponse4 === 'n') {
-  // console.log('Incorrect!');
-  alert('Incorrect!');
-}
-
-// Question 5
-
-var answer5 = prompt('1. Was I in the army for 10 years?').toLowerCase();
-var normalizedResponse5 = answer5.toLowerCase();
-
-while (normalizedResponse5 !== 'yes' && normalizedResponse5 !== 'no' && normalizedResponse5 !== 'y' && normalizedResponse5 !== 'n') {
-  answer1 = prompt('Please answer yes or no.');
-}
-if (normalizedResponse5 === 'no' || normalizedResponse5 === 'n') {
-  // console.log('Correct!');
-  alert('Correct!');
-  score++;
-}
-else if (normalizedResponse5 === 'yes' || normalizedResponse5 === 'y') {
-  // console.log('Incorrect!');
-  alert('Incorrect!');
-}
-
-// Question 6
-
-var answer6 = prompt('Guess a number between 1 and 10!');
-var number = 5;
-
-for (var i = 1; i < 4; i++) {
-  if (answer6 < number) {
-    answer6 = prompt('Too low! Try again.');
-  }
-  else if (answer6 > number) {
-    answer6 = prompt('Too high! Try again.');
-  }
-  else if (answer6 === number) {
-    console.log('Guessed right.');
-    alert('Good Job!');
-    score++;
-  }
-}
-alert('The answer is 5!');
-
-// Question 7
-
-var answer7 = prompt('What is one of my favorite video game series?');
-var normalizedResponse7 = answer7.toLowerCase();
-
-var games = ['halo', 'destiny', 'divinity', 'escape from tarkov', 'dayz', 'fallout', 'terraria', 'ark', 'elder scrolls', 'league of legends'];
-for (var j = 1; j < 6; j++) {
-  if (normalizedResponse7 === games[j]) {
-    // console.log('Correct!');
+while (checker === false) 
+{
+  if (answer === 'yes' || answer === 'y') 
+  {
     alert('Correct!');
+    // console.log(`user entered ${answer} which is incorrect`);
+    checker = true;
+  } 
+  else if (answer === 'no' || answer === 'n') 
+  {
+    alert('Correct!');
+    // console.log(`user entered ${answer} which is correct`);
     score++;
-    break;
-  }
-  else if (normalizedResponse7 !== games[j]) {
-    // console.log('Incorrect!');
-    prompt('That\'s not it! Try again!');
+    checker = true;
+  } 
+  else 
+  {
+    answer = prompt('Please answer with yes or no').toLowerCase();
   }
 }
-alert(`Thanks for playing ${name1} your score is ${score}`);
+
+// question 2
+answer = prompt('Do I grow up in Crescent City, CA?').toLowerCase();
+// console.log(`initial input is ${answer}`);
+checker = false;
+while (checker === false) 
+{
+  if (answer === 'yes' || answer === 'y') 
+  {
+    alert('Correct!');
+    // console.log(`user entered ${answer} which is correct`);
+    score++;
+    checker = true;
+  } 
+  else if (answer === 'no' || answer === 'n') 
+  {
+    alert('Incorrect!');
+    // console.log(`user entered ${answer} which is incorrect`);
+    checker = true;
+  } 
+  else 
+  {
+    answer = prompt('Please answer with yes or no').toLowerCase();
+  }
+}
+
+// question 3
+answer = prompt('Am I married?').toLowerCase();
+// console.log(`initial input is ${answer}`);
+checker = false;
+while (checker === false) 
+{
+  if (answer === 'yes' || answer === 'y') 
+  {
+    alert('Correct!');
+    // console.log(`user entered ${answer} which is incorrect`);
+    checker = true;
+  } 
+  else if (answer === 'no' || answer === 'n') 
+  {
+    alert('Incorrect!');
+    // console.log(`user entered ${answer} which is correct`);
+    checker = true;
+    score++;
+  } 
+  else 
+  {
+    answer = prompt('Please answer with yes or no').toLowerCase();
+  }
+}
+
+// question 4
+answer = prompt('Do I have one kid?').toLowerCase();
+// console.log(`initial input is ${answer}`);
+checker = false;
+while (checker === false) 
+{
+  if (answer === 'yes' || answer === 'y') 
+  {
+    alert('Incorrect!');
+    // console.log(`user entered ${answer} which is incorrect`);
+    checker = true;
+  } 
+  else if (answer === 'no' || answer === 'n') 
+  {
+    alert('Correct!');
+    // console.log(`user entered ${answer} which is correct`);
+    checker = true;
+    score++;
+  } 
+  else 
+  {
+    answer = prompt('Please answer with yes or no').toLowerCase();
+  }
+}
+
+// question 5
+answer = prompt('Was I in the army for ten years?').toLowerCase();
+// console.log(`initial input is ${answer}`);
+checker = false;
+while (checker === false) 
+{
+  if (answer === 'yes' || answer === 'y') 
+  {
+    alert('Incorrect!');
+    // console.log(`user entered ${answer} which is correct`);
+    checker = true;
+    score++;
+  } 
+  else if (answer === 'no' || answer === 'n') 
+  {
+    alert('Correct!');
+    // console.log(`user entered ${answer} which is incorrect`);
+    checker = true;
+  } 
+  else 
+  {
+    answer = prompt('Please answer with (yes/no) or (y/n)').toLowerCase();
+  }
+}
+
+// //Question 6
+
+// var lastAlert = false;
+// var number = 5;
+
+// var numberGuess = prompt('Guess a number between 1 and 10');
+// //console.log(`guess ${numGuess} and random ${randomNumber}`);
+// for (var i = 0; i < 3 ; i++) 
+// {
+//   //console.log(`for loop start, guess${numGuess} and random is ${randomNumber}`);
+//   if (numberGuess > number) 
+//   {
+//     numberGuess = Number(prompt(`Nope, it's lower than ${numberGuess}, you have ${3-i} more chance(s)`));
+//     //console.log('too high');
+//   } 
+//   else if (numberGuess < number) 
+//   {
+//     numberGuess = Number(prompt(`Nope, it's higher then ${numberGuess}, you have ${3-i} more chance(s)`));
+//     //console.log('too low');
+//   } 
+//   else 
+//   {
+//     alert(`good guess!, it is ${numberGuess}!!!`);
+//     //console.log('correct');
+//     score++;
+//     lastAlert = true;
+//   }
+// }
+// if (lastAlert === false) 
+// {
+//   alert(`That was your last guess, the correct answer was ${number}`);
+// }
+
+// // Question 7
+// lastAlert = false;
+// checker = false;
+// var games = ['Halo', 'Destiny', '', ''];
+// alert('');
+// for(var j = 0; j < 6; j++) 
+// {
+//   var guess =  prompt().toLowerCase();
+//   for(var k = 0; k < games.length; k++) 
+//   {
+//     //console.log(catNames[k]);
+//     if(guess === games[k])
+//     {
+//       alert();
+//       checker = true;
+//       //console.log('correct');
+//       lastAlert = true;
+//       score++;
+//     }
+//   }
+//   if(checker)
+//   {
+//     break;
+//   } 
+//   else if (j < 5) 
+//   {
+//     alert(`None of them are ${guess}, try again.`);
+//   }
+// }
+// if (lastAlert === false) 
+// {
+//   alert(`That was your last guess, they are ${games}`);
+// }
+
+// alert(`Thanks for playing ${userName}.  You got ${score} out of 7.`);
+
